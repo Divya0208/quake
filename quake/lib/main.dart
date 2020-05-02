@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'components/constants.dart';
 import 'views/landing_page.dart';
 import 'views/dashboard.dart';
 import 'views/player.dart';
@@ -11,9 +12,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Quake',
-      theme: ThemeData(
-
-        primarySwatch: Colors.blue,
+      theme: ThemeData.dark().copyWith(
+        accentColor: primary_pink,
       ),
       initialRoute: LandingPage.id,
       routes: {
