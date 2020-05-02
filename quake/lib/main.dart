@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'views/landing_page.dart';
 import 'views/dashboard.dart';
 import 'views/player.dart';
-
+import 'views/test.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -15,8 +15,9 @@ class MyApp extends StatelessWidget {
 
         primarySwatch: Colors.blue,
       ),
-      initialRoute: LandingPage.id,
+      initialRoute:TestPage.id,
       routes: {
+        TestPage.id: (context)=>TestPage(),
         LandingPage.id : (context) => LandingPage(),
         Dashboard.id : (context) => Dashboard(),
         Player.id : (context) => Player()
