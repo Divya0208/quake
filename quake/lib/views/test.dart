@@ -25,7 +25,7 @@ class _TestPageState extends State<TestPage> {
       print(wave.channels);
       List <double> random = [0.2,0.1,0.3,0.5,0.1,0.2,0.1];
 
-      for(int i=0;i<random.length;i++){
+      /*for(int i=0;i<random.length;i++){
         print(random[i]);
         await Future.delayed(Duration(seconds: 1));
         if(random[i]>=0.2){
@@ -33,7 +33,30 @@ class _TestPageState extends State<TestPage> {
         }else{
           Vibration.cancel();
         }
+      }*/
+      int countV = 0;
+      int countP = 0;
+      List <int> songPattern = [];
+      for(int i=0; i< dataPoints.length; i=i+2){
+        if (dataPoints[i].abs() > 0.02){
+          if(countP > 0){
+            songPattern.add((countP*1000/172).round());
+            countP=0;
+          }
+          countV++;
+        }
+        else{
+          if(countV > 0){
+            songPattern.add((countV*1000/172).round());
+            countV=0;
+          }
+          countV++;
+        }
       }
+
+      //print(dataPoints.length);
+      //print(songPattern);
+      Vibration.vibrate(pattern: songPattern);
     }
     
   }
