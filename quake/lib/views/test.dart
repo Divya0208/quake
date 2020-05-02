@@ -18,7 +18,7 @@ class _TestPageState extends State<TestPage> {
   void vibrate()async{
     print(await Vibration.hasAmplitudeControl());
     if (await Vibration.hasVibrator()) {
-      Vibration.vibrate(amplitude: 255);
+      Vibration.vibrate(pattern: [125,75,125,275,200,275,125,75,125,275,200,600,200,600]);
     }
   }
   @override
