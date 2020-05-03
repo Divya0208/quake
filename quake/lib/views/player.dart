@@ -4,6 +4,7 @@ import 'package:quake/components/buttons.dart';
 import 'package:quake/components/music_slider.dart';
 import 'package:audioplayers/audio_cache.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:quake/models/quake_brain.dart';
 
 class Player extends StatefulWidget {
   static const String id = 'player';

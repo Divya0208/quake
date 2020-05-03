@@ -19,11 +19,7 @@ class MyApp extends StatelessWidget {
         accentColor: primary_pink,
       ),
 
-
-
-
       initialRoute: Player.id,
-
 
       routes: {
         
