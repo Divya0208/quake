@@ -11,10 +11,10 @@ class LandingPage extends StatelessWidget {
     bool ampControl = await Vibration.hasAmplitudeControl();
     Future.delayed(Duration(milliseconds:1500),(){
       if(!ampControl){
-        Navigator.pushNamed(context, UnsupportedPage.id);
+        Navigator.popAndPushNamed(context, UnsupportedPage.id);
       }
       else{
-        Navigator.pushNamed(context, Dashboard.id);
+        Navigator.popAndPushNamed(context, Dashboard.id);
       }
     });
   }

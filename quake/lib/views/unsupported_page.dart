@@ -45,7 +45,7 @@ class UnsupportedPage extends StatelessWidget {
                   ),
                   FlatButton(
                     onPressed: (){
-                      Navigator.pushNamed(context, Dashboard.id);
+                      Navigator.popAndPushNamed(context, Dashboard.id);
                     },
                     child:Container(
                       padding: EdgeInsets.symmetric(vertical:10,horizontal:20),
