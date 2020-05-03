@@ -1,7 +1,7 @@
 # Welcome to quake !
 
 It is a mobile application that taps into the beats of a song and converts them into intense phone vibrations which can give a hearing impaired person the same feel of the song that we enjoy.  Why **quake** ? Because it's somewhat like a quake.
-![Logo](https://github.comDivya0208/miniHack_bleh-_-XD/blob/master/quake/assets/images/quake_logo.png)
+![Logo](https://github.comDivya0208/miniHack_bleh-_-XD/quake/assets/images/quake_logo.png)
 
 
 ## Objective 
