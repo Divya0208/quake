@@ -12,13 +12,13 @@ class LandingPage extends StatelessWidget {
     if(!ampControl){
       Navigator.pushNamed(context, UnsupportedPage.id);
     }
+    else{
+      Navigator.pushNamed(context, Dashboard.id);
+    }
   }
   
   @override
-  Widget build(BuildContext context) {
-    _haveAmplitudeControl(context);
-
-    
+  Widget build(BuildContext context) { 
     return FlatButton(
       child: Container(
         color: Color(0xFF101010),
@@ -27,7 +27,7 @@ class LandingPage extends StatelessWidget {
         ),
       ),
       onPressed: (){
-        Navigator.pushNamed(context, Dashboard.id);
+        _haveAmplitudeControl(context);
       },
     );
   }
