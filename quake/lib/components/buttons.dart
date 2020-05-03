@@ -3,6 +3,10 @@ import 'package:quake/components/constants.dart';
 
 
 class PlayButton extends StatelessWidget {
+
+  Function onPress;
+
+  PlayButton({@required this.onPress});
  
   @override
   Widget build(BuildContext context) {
@@ -23,6 +27,10 @@ class PlayButton extends StatelessWidget {
 
 class PauseButton extends StatelessWidget {
 
+  Function onPress;
+
+  PauseButton({@required this.onPress});
+
   @override
   Widget build(BuildContext context) {
     return RawMaterialButton(
@@ -41,6 +49,10 @@ class PauseButton extends StatelessWidget {
 }
 
 class SkipPrevious extends StatelessWidget {
+
+  Function onPress;
+
+  SkipPrevious({@required this.onPress});
   
   @override
   Widget build(BuildContext context) {
@@ -58,6 +70,10 @@ class SkipPrevious extends StatelessWidget {
 }
 
 class SkipNext extends StatelessWidget {
+
+  Function onPress;
+
+  SkipNext({@required this.onPress});
  
   @override
   Widget build(BuildContext context) {

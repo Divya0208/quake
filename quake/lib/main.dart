@@ -18,13 +18,13 @@ class MyApp extends StatelessWidget {
       theme: ThemeData.dark().copyWith(
         accentColor: primary_pink,
       ),
-      initialRoute: LandingPage.id,
+      initialRoute: Player.id,
       routes: {
         UnsupportedPage.id: (context)=>UnsupportedPage(),
         TestPage.id: (context)=>TestPage(),
         LandingPage.id : (context) => LandingPage(),
         Dashboard.id : (context) => Dashboard(),
-        Player.id : (context) => Player()
+        Player.id : (context) => Player(songNumber: 0)
       },
     );
   }

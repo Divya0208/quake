@@ -14,7 +14,7 @@ class _MusicSliderState extends State<MusicSlider> {
       child: SliderTheme(
         data: SliderTheme.of(context).copyWith(
           thumbShape: RoundSliderThumbShape(enabledThumbRadius: 7.0),
-          overlayShape: RoundSliderOverlayShape(overlayRadius: 30.0),
+          overlayShape: RoundSliderOverlayShape(overlayRadius: 20.0),
           thumbColor: Colors.white,
           activeTrackColor: Colors.white,
           inactiveTrackColor: Color(0xFF8D8E98),

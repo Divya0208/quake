@@ -2,30 +2,52 @@ import 'package:flutter/material.dart';
 import 'package:quake/components/constants.dart';
 import 'package:quake/components/buttons.dart';
 import 'package:quake/components/music_slider.dart';
+import 'package:audioplayers/audio_cache.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Player extends StatefulWidget {
   static const String id = 'player';
 
+  int songNumber;
+
+  Player({ @required this.songNumber});
+
   @override
-  _PlayerState createState() => _PlayerState();
+  _PlayerState createState() => _PlayerState(songNumber: songNumber);
 }
 
 class _PlayerState extends State<Player> {
-  
-  String songPath = "assets/sounds/HighwayToHell.mp3";
-  String songTitle = "";
-  String artistName = "";
 
-  _PlayerState();
+  _PlayerState({@required this.songNumber});
+
+  int songNumber;
+  bool pause = true;
+  static AudioCache player = AudioCache();
+
+    _launchURL(url) async {
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
+  }
+  
 
   @override
   void initState() {
+
+    String songPath = playList[songNumber].songPath;
+    player.play(songPath);
     super.initState();
   }
 
 
   @override
   Widget build(BuildContext context) {
+
+    String songTitle = playList[songNumber].songName;
+    String artistName = playList[songNumber].artistName;
+
     return Container(
       child: Stack(children: <Widget>[
         Row(crossAxisAlignment: CrossAxisAlignment.stretch, children: <Widget>[
@@ -62,7 +84,7 @@ class _PlayerState extends State<Player> {
             ),
             SizedBox(height: 20.0),
             Text(
-              'SONG NAME',
+              songTitle,
               style: TextStyle(
                   fontSize: 20.0,
                   color: Colors.white,
@@ -71,7 +93,7 @@ class _PlayerState extends State<Player> {
             ),
             SizedBox(height: 10.0),
             Text(
-              'Singer Name',
+              artistName,
               style: TextStyle(
                   fontSize: 15.0,
                   color: Colors.white,
@@ -88,7 +110,28 @@ class _PlayerState extends State<Player> {
             SizedBox(height: 60.0),
             Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: <Widget>[SkipPrevious(), PlayButton(), SkipNext()]),
+                children: <Widget>[
+                  SkipPrevious(
+                    onPress: null,
+                  ), 
+                  pause ? 
+                  PauseButton(
+                    onPress: (){
+                      setState(() {
+                        pause = !pause;
+                      });
+                    },
+                  ) : 
+                  PlayButton(
+                    onPress: (){
+                      setState(() {
+                        pause = !pause;
+                      });
+                    },
+                  ), 
+                  SkipNext(
+                    onPress: null,
+                  )]),
             SizedBox(height: 60.0),
             Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -104,7 +147,9 @@ class _PlayerState extends State<Player> {
               children: <Widget>[
                 FloatingActionButton(
                   backgroundColor: Color(0x00000000),
-                  onPressed: null, 
+                  onPressed: (){
+                    _launchURL(playList[songNumber].youtubeURL);
+                  }, 
                   child: Image(
                     image: AssetImage('assets/images/egg.jpg'),
                   )
