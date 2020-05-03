@@ -260,7 +260,6 @@ class _DashboardState extends State<Dashboard> {
                   Flexible(
                       flex: 4,
                       child: Container(
-<<<<<<< HEAD
                           color: Colors.deepPurple,
                           child: Text(
                             "We provide music to the deaf",
@@ -299,7 +298,6 @@ class _DashboardState extends State<Dashboard> {
                     ),
                   ),
                 ],
-=======
                           color:Colors.deepPurple,
                           child:Text(
                         "We provide music to the deaf",
@@ -316,7 +314,6 @@ class _DashboardState extends State<Dashboard> {
                     )
                   ),
                 ]),
->>>>>>> bba5d3cdeb3da77c8b9ad33686b51451a55f585d
               ),
             ),
           ],

@@ -48,27 +48,24 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-<<<<<<< HEAD
+
     - assets/
     - assets/quake_logo.png
     - assets/waveforms/HighWayToHell.json
     - assets/images/icon-waveform.png
     - assets/images/Highway_To_Hell.jpg
-=======
     - assets/images/quake_logo.png
     - assets/images/egg.jpg
     - assets/waveforms/HighWayToHell.json
     - assets/sounds/HighWayToHell.mp3
 
->>>>>>> bba5d3cdeb3da77c8b9ad33686b51451a55f585d
+
   fonts:
     - family: Pangolin
       fonts:
         - asset: fonts/Pangolin-Regular.ttf
-<<<<<<< HEAD
 
-=======
->>>>>>> bba5d3cdeb3da77c8b9ad33686b51451a55f585d
+
     - family: Pacifico
       fonts:
         - asset: fonts/Pacifico-Regular.ttf
@@ -99,7 +96,4 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
-<<<<<<< HEAD
 
-=======
->>>>>>> bba5d3cdeb3da77c8b9ad33686b51451a55f585d
