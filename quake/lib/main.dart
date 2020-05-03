@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:quake/views/lyrics.dart';
 import 'components/constants.dart';
 import 'views/landing_page.dart';
 import 'views/dashboard.dart';
@@ -18,8 +19,9 @@ class MyApp extends StatelessWidget {
       theme: ThemeData.dark().copyWith(
         accentColor: primary_pink,
       ),
-      initialRoute: Player.id,
+      initialRoute: MyHomePage.id,
       routes: {
+        MyHomePage.id:(context)=>MyHomePage(),
         UnsupportedPage.id: (context)=>UnsupportedPage(),
         TestPage.id: (context)=>TestPage(),
         LandingPage.id : (context) => LandingPage(),
