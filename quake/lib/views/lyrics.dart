@@ -5,17 +5,17 @@ import 'package:flutter_lyric/lyric_widget.dart';
 import 'package:quake/components/constants.dart';
 
 
-class MyHomePage extends StatefulWidget {
+class Lyrics extends StatefulWidget {
   static const id = "Lyrics";
-  MyHomePage({Key key, this.title}) : super(key: key);
+  Lyrics({Key key, this.title}) : super(key: key);
 
   final String title;
 
   @override
-  _MyHomePageState createState() => _MyHomePageState();
+  _LyricsState createState() => _LyricsState();
 }
 
-class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin{
+class _LyricsState extends State<Lyrics> with TickerProviderStateMixin{
   var songLyc = playList[0].lyrics;
   Timer _countdownTimer;
   int _countdownNum = 3000000;
