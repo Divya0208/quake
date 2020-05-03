@@ -13,6 +13,9 @@ class LandingPage extends StatelessWidget {
       if(!ampControl){
         Navigator.pushNamed(context, UnsupportedPage.id);
       }
+      else{
+        Navigator.pushNamed(context, Dashboard.id);
+      }
     });
   }
   
@@ -26,9 +29,7 @@ class LandingPage extends StatelessWidget {
           child: Image(image: AssetImage('assets/images/quake_logo.png')),
         ),
       ),
-      onPressed: (){
-        Navigator.pushNamed(context, Dashboard.id);
-      },
+      onPressed: (){},
     );
   }
 }

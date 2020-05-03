@@ -20,7 +20,7 @@ class _PlayerState extends State<Player> {
   _PlayerState({@required this.songNumber});
 
   int songNumber;
-  bool pause = true;
+  bool showPauseButton = true;
 
   _launchURL(url) async {
     if (await canLaunch(url)) {
@@ -110,12 +110,16 @@ class _PlayerState extends State<Player> {
                   GestureDetector(
                     onTap:(){
                       setState(() {
-                        pause=!pause;
+                        showPauseButton=!showPauseButton;
                       });
                     },
-                    child:pause
-                      ? PauseButton()
-                      : PlayButton()
+                    child:showPauseButton
+                      ? PauseButton(
+                        onPress: null,
+                      )
+                      : PlayButton(
+                        onPress: null,
+                      )
                   )
               
                 ]),
