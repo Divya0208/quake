@@ -17,10 +17,7 @@ class LandingPage extends StatelessWidget {
   }
   
   @override
-  Widget build(BuildContext context) {
-    _haveAmplitudeControl(context);
-
-    
+  Widget build(BuildContext context) { 
     return FlatButton(
       child: Container(
         color: Color(0xFF101010),

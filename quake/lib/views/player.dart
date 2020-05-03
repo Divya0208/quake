@@ -37,7 +37,7 @@ class _PlayerState extends State<Player> {
   void initState() {
 
     String songPath = playList[songNumber].songPath;
-    player.play(songPath);
+    
     super.initState();
   }
 
@@ -62,6 +62,29 @@ class _PlayerState extends State<Player> {
             ),
           )
         ]),
+        Image(
+          image: AssetImage('assets/images/quake.png'),
+        ),
+        Row(
+          crossAxisAlignment: CrossAxisAlignment.end,
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: <Widget>[
+            Column(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: <Widget>[
+                FloatingActionButton(
+                  backgroundColor: Color(0x00000000),
+                  onPressed: (){
+                    _launchURL(playList[songNumber].youtubeURL);
+                  }, 
+                  child: Image(
+                    image: AssetImage('assets/images/egg.jpg'),
+                  )
+                ),
+              ],
+            )
+          ],
+        ),
         Center(
             child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -138,26 +161,7 @@ class _PlayerState extends State<Player> {
                 children: <Widget>[VolumeDown(), MusicSlider(), VolumeUp()]),
           ],
         )),
-        Row(
-          crossAxisAlignment: CrossAxisAlignment.end,
-          mainAxisAlignment: MainAxisAlignment.end,
-          children: <Widget>[
-            Column(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: <Widget>[
-                FloatingActionButton(
-                  backgroundColor: Color(0x00000000),
-                  onPressed: (){
-                    _launchURL(playList[songNumber].youtubeURL);
-                  }, 
-                  child: Image(
-                    image: AssetImage('assets/images/egg.jpg'),
-                  )
-                ),
-              ],
-            )
-          ],
-        )
+        
       ]),
     );
   }

@@ -46,14 +46,14 @@ flutter:
   assets:
     - assets/images/quake_logo.png
     - assets/images/egg.jpg
+    - assets/images/quake.png
+    - assets/images/Highway_To_Hell.jpg
     - assets/waveforms/HighWayToHell.json
     - assets/sounds/HighWayToHell.mp3
-
   fonts:
     - family: Pangolin
       fonts:
         - asset: fonts/Pangolin-Regular.ttf
-
     - family: Pacifico
       fonts:
         - asset: fonts/Pacifico-Regular.ttf
@@ -84,4 +84,3 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
-

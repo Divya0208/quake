@@ -31,7 +31,6 @@ class _TestPageState extends State<TestPage> {
     }
     
     if (await Vibration.hasVibrator()) {
-
       final wave = await loadWaveformData("assets/waveforms/HighWayToHell.json");
       List <double> dataPoints = wave.scaledData();
   
