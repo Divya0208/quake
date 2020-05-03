@@ -2,6 +2,95 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class PageTwo extends StatelessWidget {
+  Widget design_stack() {
+    return Stack(children: <Widget>[
+      RawMaterialButton(
+        onPressed: () {},
+        elevation: 2.0,
+        child: Ink(
+            decoration: BoxDecoration(
+          shape: BoxShape.circle,
+          gradient: LinearGradient(
+            colors: [Color(0xff570292), Color(0xff743469)],
+            begin: Alignment.centerLeft,
+            end: Alignment.centerRight,
+          ),
+        )),
+        padding: EdgeInsets.all(50.0),
+        shape: CircleBorder(),
+      ),
+      RawMaterialButton(
+        onPressed: () {},
+        elevation: 20.0,
+        child: Ink(
+            decoration: BoxDecoration(
+          shape: BoxShape.circle,
+          gradient: LinearGradient(
+            colors: [Color(0xff6F16AC), Color(0xff923582)],
+            begin: Alignment.centerLeft,
+            end: Alignment.centerRight,
+          ),
+        )),
+        padding: EdgeInsets.all(65.0),
+        shape: CircleBorder(),
+      ),
+      RawMaterialButton(
+        onPressed: () {},
+        elevation: 20.0,
+        child: Ink(
+            decoration: BoxDecoration(
+          shape: BoxShape.circle,
+          gradient: LinearGradient(
+            colors: [Color(0xff8115CB), Color(0xffA22A8D)],
+            begin: Alignment.centerLeft,
+            end: Alignment.centerRight,
+          ),
+        )),
+        padding: EdgeInsets.all(80.0),
+        shape: CircleBorder(),
+      ),
+      RawMaterialButton(
+        onPressed: () {},
+        elevation: 20.0,
+        child: Ink(
+            decoration: BoxDecoration(
+          shape: BoxShape.circle,
+          gradient: LinearGradient(
+            colors: [Color(0xff8E24D6), Color(0xffBD28A3)],
+            begin: Alignment.centerLeft,
+            end: Alignment.centerRight,
+          ),
+        )),
+        padding: EdgeInsets.all(95.0),
+        shape: CircleBorder(),
+      ),
+      RawMaterialButton(
+        onPressed: () {},
+        elevation: 20.0,
+        child: Center(
+          child: Image(
+            image: AssetImage("./assets/images/icon-waveform.png"),
+          ),
+        ),
+        padding: EdgeInsets.all(50.0),
+        shape: CircleBorder(),
+      ),
+      RawMaterialButton(
+        onPressed: () {},
+        elevation: 20.0,
+        child: Center(
+          child: Icon(
+            FontAwesomeIcons.play,
+            color: Colors.white,
+            size: 50,
+          ),
+        ),
+        padding: EdgeInsets.all(50.0),
+        shape: CircleBorder(),
+      ),
+    ]);
+  }
+
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
@@ -16,53 +105,13 @@ class PageTwo extends StatelessWidget {
                   image: new NetworkImage(
                       "https://images.unsplash.com/photo-1475189778702-5ec9941484ae?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80"))),
           child: Container(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                //First Button
-                Padding(
-                  padding: const EdgeInsets.all(16.0),
-                  child: Center(
-                    child: Container(
-                      width: MediaQuery.of(context).size.width,
-                      height: MediaQuery.of(context).size.height / 8,
-                      child: RaisedButton(
-                          color: Color(0xffffffff),
-                          child: Container(
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                              children: <Widget>[
-                                Container(
-                                  child: Icon(
-                                    FontAwesomeIcons.umbrellaBeach,
-                                    color: new Color(0xff11b719),
-                                    size: 30.0,
-                                  ),
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.only(left: 16.0),
-                                  child: Container(
-                                    child: Text(
-                                      "Flights to San Francisco",
-                                      style: TextStyle(
-                                        color: new Color(0xff000000),
-                                        fontSize: 24.0,
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                          onPressed: () {},
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(50.0))),
-                    ),
-                  ),
-                ),
-              ],
-            ),
-          ),
+              child: Padding(
+            padding: EdgeInsets.fromLTRB(30, 350, 30, 10),
+            child: Container(
+                width: MediaQuery.of(context).size.width,
+                height: MediaQuery.of(context).size.height / 8,
+                child: design_stack()),
+          )),
         ),
       ],
     ));

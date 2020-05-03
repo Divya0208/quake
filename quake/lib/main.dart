@@ -18,7 +18,13 @@ class MyApp extends StatelessWidget {
       theme: ThemeData.dark().copyWith(
         accentColor: primary_pink,
       ),
-      initialRoute: LandingPage.id,
+
+
+
+
+      initialRoute: Player.id,
+
+
       routes: {
         
         UnsupportedPage.id: (context)=>UnsupportedPage(),
