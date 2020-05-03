@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:quake/components/constants.dart';
 import 'package:quake/components/buttons.dart';
 import 'package:quake/components/music_slider.dart';
-import 'package:id3/id3.dart';
 
 class Player extends StatefulWidget {
   static const String id = 'player';
@@ -13,20 +12,16 @@ class Player extends StatefulWidget {
 
 class _PlayerState extends State<Player> {
 
-  String songPath = "assets/sounds/HighwayToHell.mp3";
+  String songPath = "./HighwayToHell.mp3";
   String songTitle = "";
   String artistName = "";
 
   _PlayerState();
 
-  /*@override
+  @override
   void initState() {
-    MP3Instance mp3instance = MP3Instance(songPath);
-    if(mp3instance.parseTagsSync()){
-      print(mp3instance.getMetaTags());
-    }
     super.initState();
-  }*/
+  }
 
 
   @override
