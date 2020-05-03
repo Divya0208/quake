@@ -134,27 +134,17 @@ class _PlayerState extends State<Player> {
             Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: <Widget>[
-                  SkipPrevious(
-                    onPress: null,
-                  ),
-                  pause
-                      ? PauseButton(
-                          onPress: () {
-                            setState(() {
-                              pause = !pause;
-                            });
-                          },
-                        )
-                      : PlayButton(
-                          onPress: () {
-                            setState(() {
-                              pause = !pause;
-                            });
-                          },
-                        ),
-                  SkipNext(
-                    onPress: null,
+                  GestureDetector(
+                    onTap:(){
+                      setState(() {
+                        pause=!pause;
+                      });
+                    },
+                    child:pause
+                      ? PauseButton()
+                      : PlayButton()
                   )
+              
                 ]),
             SizedBox(height: 60.0),
             Row(

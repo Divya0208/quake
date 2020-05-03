@@ -55,11 +55,6 @@ flutter:
     - family: Pangolin
       fonts:
         - asset: fonts/Pangolin-Regular.ttf
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 781a3c06e22ca92c45773de1a085b2dd52ed7fe2
     - family: Pacifico
       fonts:
         - asset: fonts/Pacifico-Regular.ttf
