@@ -38,6 +38,12 @@ class _PlayerState extends State<Player> {
     brain.stopVibration();
     stopwatch.stop();
   }
+
+  void _resetAudio(){
+    brain.stopVibration();
+    stopwatch.reset();
+    stopwatch.stop();
+  }
   @override
   void initState() {
     Timer.periodic(Duration(seconds: 1), (Timer t){setState(() {});});
@@ -128,6 +134,15 @@ class _PlayerState extends State<Player> {
                       : PlayButton(
                         onPress: null,
                       )
+                  ),
+                  GestureDetector(
+                    onTap:  (){
+                        setState(() {
+                          playing = false;
+                          _resetAudio();
+                        });
+                      },
+                    child: ResetButton(),
                   )
               
                 ]),
