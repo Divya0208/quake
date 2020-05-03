@@ -46,8 +46,20 @@ class _PlayerState extends State<Player> {
   }
   @override
   void initState() {
-    Timer.periodic(Duration(seconds: 1), (Timer t){setState(() {});});
+    Timer.periodic(Duration(milliseconds: 100), (Timer t){setState(() {});});
     super.initState();
+  }
+
+  String findLyrics(){
+    int currentTime = stopwatch.elapsedMilliseconds;
+    Lyric lyric;
+    for(int i=0;i<playList[songNumber].lyrics.length;i++){
+      lyric = playList[songNumber].lyrics[i];
+      if(currentTime>=lyric.start && currentTime<=lyric.end){
+        return lyric.title;
+      }
+    }
+    return '...';
   }
 
   @override
@@ -115,6 +127,16 @@ class _PlayerState extends State<Player> {
                   fontSize: 30.0,
                   color: Colors.white,
                   decoration: TextDecoration.none),
+            ),
+            SizedBox(height: 60.0),
+            Text(
+              findLyrics(),
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                  fontSize: 18.0,
+                  color: Colors.white,
+                  decoration: TextDecoration.none),
+                          
             ),
             SizedBox(height: 60.0),
             Row(

@@ -33,7 +33,7 @@ class UnsupportedPage extends StatelessWidget {
                   ),
                   SizedBox(height: 20,),
                   Text(
-                    'You can still use the app but will not be to have the full experience.',
+                    'You can still use the app but will not be able to have the full experience.',
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       letterSpacing: 1,
