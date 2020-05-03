@@ -5,14 +5,14 @@ import 'package:quake/components/music_slider.dart';
 
 class Player extends StatefulWidget {
   static const String id = 'player';
-  
+
   @override
   _PlayerState createState() => _PlayerState();
 }
 
 class _PlayerState extends State<Player> {
-
-  String songPath = "./HighwayToHell.mp3";
+  
+  String songPath = "assets/sounds/HighwayToHell.mp3";
   String songTitle = "";
   String artistName = "";
 
@@ -64,11 +64,10 @@ class _PlayerState extends State<Player> {
             Text(
               'SONG NAME',
               style: TextStyle(
-                fontSize: 20.0,
-                color: Colors.white,
-                fontFamily: 'Source Sans Pro',
-                decoration: TextDecoration.none
-              ),
+                  fontSize: 20.0,
+                  color: Colors.white,
+                  fontFamily: 'Source Sans Pro',
+                  decoration: TextDecoration.none),
             ),
             SizedBox(height: 10.0),
             Text(
@@ -94,13 +93,26 @@ class _PlayerState extends State<Player> {
             Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: <Widget>[VolumeDown(), MusicSlider(), VolumeUp()]),
-            Row(
+          ],
+        )),
+        Row(
+          crossAxisAlignment: CrossAxisAlignment.end,
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: <Widget>[
+            Column(
               mainAxisAlignment: MainAxisAlignment.end,
               children: <Widget>[
-                FloatingActionButton(onPressed: null)
-            ],)
+                FloatingActionButton(
+                  backgroundColor: Color(0x00000000),
+                  onPressed: null, 
+                  child: Image(
+                    image: AssetImage('assets/images/egg.jpg'),
+                  )
+                ),
+              ],
+            )
           ],
-        ))
+        )
       ]),
     );
   }
