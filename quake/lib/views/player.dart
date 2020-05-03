@@ -50,6 +50,7 @@ class _PlayerState extends State<Player> {
     super.initState();
   }
 
+  
   String findLyrics(){
     int currentTime = stopwatch.elapsedMilliseconds;
     Lyric lyric;
