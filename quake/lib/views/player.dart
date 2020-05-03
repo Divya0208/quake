@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:quake/components/constants.dart';
 import 'package:quake/components/buttons.dart';
@@ -7,9 +8,7 @@ import 'package:quake/models/quake_brain.dart';
 
 class Player extends StatefulWidget {
   static const String id = 'player';
-
   int songNumber;
-
   Player({@required this.songNumber});
 
   @override
@@ -18,10 +17,10 @@ class Player extends StatefulWidget {
 
 class _PlayerState extends State<Player> {
   _PlayerState({@required this.songNumber});
-
+  Stopwatch stopwatch = Stopwatch();
+  QuakeBrain brain = new QuakeBrain();
   int songNumber;
-  bool showPauseButton = true;
-
+  bool playing = false;
   _launchURL(url) async {
     if (await canLaunch(url)) {
       await launch(url);
@@ -30,10 +29,19 @@ class _PlayerState extends State<Player> {
     }
   }
 
+  void _playAudio(){
+    brain.vibrate();  
+    stopwatch.start();
+  }
+
+  void _pauseAudio(){
+    brain.stopVibration();
+    stopwatch.reset();
+    stopwatch.stop();
+  }
   @override
   void initState() {
-    String songPath = playList[songNumber].songPath;
-
+    Timer.periodic(Duration(seconds: 1), (Timer t){setState(() {});});
     super.initState();
   }
 
@@ -97,7 +105,7 @@ class _PlayerState extends State<Player> {
             ),
             SizedBox(height: 40.0),
             Text(
-              'Current Time',
+              '${((stopwatch.elapsedMilliseconds)/60000).round()} : ${(((stopwatch.elapsedMilliseconds)/1000)%60).round()}',
               style: TextStyle(
                   fontSize: 30.0,
                   color: Colors.white,
@@ -110,10 +118,11 @@ class _PlayerState extends State<Player> {
                   GestureDetector(
                     onTap:(){
                       setState(() {
-                        showPauseButton=!showPauseButton;
+                        playing=!playing;
+                        playing?_playAudio():_pauseAudio();
                       });
                     },
-                    child:showPauseButton
+                    child:playing
                       ? PauseButton(
                         onPress: null,
                       )
@@ -126,7 +135,7 @@ class _PlayerState extends State<Player> {
             SizedBox(height: 60.0),
             Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: <Widget>[VolumeDown(), MusicSlider(), VolumeUp()]),
+                children: <Widget>[VolumeDown(),MusicSlider(), VolumeUp()]),
           ],
         )),
       ]),
