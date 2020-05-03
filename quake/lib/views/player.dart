@@ -3,6 +3,7 @@ import 'package:quake/components/constants.dart';
 import 'package:quake/components/buttons.dart';
 import 'package:quake/components/music_slider.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:quake/models/quake_brain.dart';
 
 class Player extends StatefulWidget {
   static const String id = 'player';
@@ -106,27 +107,17 @@ class _PlayerState extends State<Player> {
             Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: <Widget>[
-                  SkipPrevious(
-                    onPress: null,
-                  ),
-                  pause
-                      ? PauseButton(
-                          onPress: () {
-                            setState(() {
-                              pause = !pause;
-                            });
-                          },
-                        )
-                      : PlayButton(
-                          onPress: () {
-                            setState(() {
-                              pause = !pause;
-                            });
-                          },
-                        ),
-                  SkipNext(
-                    onPress: null,
+                  GestureDetector(
+                    onTap:(){
+                      setState(() {
+                        pause=!pause;
+                      });
+                    },
+                    child:pause
+                      ? PauseButton()
+                      : PlayButton()
                   )
+              
                 ]),
             SizedBox(height: 60.0),
             Row(
