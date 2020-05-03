@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 
 class MusicSlider extends StatefulWidget {
+  int progress;
+  int trackLength;
+  MusicSlider({this.progress,this.trackLength});
   @override
   _MusicSliderState createState() => _MusicSliderState();
 }
 
 class _MusicSliderState extends State<MusicSlider> {
-  var height = 150.0;
+  
   @override
   Widget build(BuildContext context) {
     return Material(
@@ -20,13 +23,11 @@ class _MusicSliderState extends State<MusicSlider> {
           inactiveTrackColor: Color(0xFF8D8E98),
         ),
         child: Slider(
-            value: height.toDouble(),
-            min: 120.0,
-            max: 500.0,
+            value: widget.progress.toDouble(),
+            min: 0,
+            max: widget.trackLength.toDouble(),
             onChanged: (double newHeight) {
-              setState(() {
-                height = newHeight;
-              });
+              
             }),
       ),
     );

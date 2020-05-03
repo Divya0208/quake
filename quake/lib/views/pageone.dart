@@ -1,11 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:quake/views/player.dart';
 
 class PageOne extends StatelessWidget {
-  Widget design_stack() {
+  Widget design_stack(BuildContext context) {
     return Stack(children: <Widget>[
       RawMaterialButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.pushNamed(context, Player.id);
+        },
         elevation: 2.0,
         child: Ink(
             decoration: BoxDecoration(
@@ -20,7 +23,9 @@ class PageOne extends StatelessWidget {
         shape: CircleBorder(),
       ),
       RawMaterialButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.pushNamed(context, Player.id);
+        },
         elevation: 20.0,
         child: Ink(
             decoration: BoxDecoration(
@@ -35,7 +40,9 @@ class PageOne extends StatelessWidget {
         shape: CircleBorder(),
       ),
       RawMaterialButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.pushNamed(context, Player.id);
+        },
         elevation: 20.0,
         child: Ink(
             decoration: BoxDecoration(
@@ -50,7 +57,9 @@ class PageOne extends StatelessWidget {
         shape: CircleBorder(),
       ),
       RawMaterialButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.pushNamed(context, Player.id);
+        },
         elevation: 20.0,
         child: Ink(
             decoration: BoxDecoration(
@@ -65,7 +74,9 @@ class PageOne extends StatelessWidget {
         shape: CircleBorder(),
       ),
       RawMaterialButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.pushNamed(context, Player.id);
+        },
         elevation: 20.0,
         child: Center(
           child: Image(
@@ -76,7 +87,9 @@ class PageOne extends StatelessWidget {
         shape: CircleBorder(),
       ),
       RawMaterialButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.pushNamed(context, Player.id);
+        },
         elevation: 20.0,
         child: Center(
           child: Icon(
@@ -105,13 +118,21 @@ class PageOne extends StatelessWidget {
                     image:
                         new AssetImage("./assets/images/Highway_To_Hell.jpg"))),
             child: Container(
-                child: Padding(
-              padding: EdgeInsets.fromLTRB(30, 350, 30, 10),
+              width: MediaQuery.of(context).size.width,
+              height: MediaQuery.of(context).size.height,
+              color: Colors.black54,
               child: Container(
-                  width: MediaQuery.of(context).size.width,
-                  height: MediaQuery.of(context).size.height / 8,
-                  child: design_stack()),
-            )),
+                  child: Padding(
+                padding: EdgeInsets.fromLTRB(30, 350, 30, 10),
+                child: Container(
+                    width: MediaQuery.of(context).size.width,
+                    height: MediaQuery.of(context).size.height / 8,
+                    child: GestureDetector(
+                      child: design_stack(context)
+                    )
+                  ),
+              )),
+            ),
           ),
         ],
       ),

@@ -3,9 +3,7 @@ import 'components/constants.dart';
 import 'views/landing_page.dart';
 import 'views/dashboard.dart';
 import 'views/player.dart';
-import 'views/test.dart';
 import 'views/unsupported_page.dart';
-
 
 void main() => runApp(MyApp());
 
@@ -20,16 +18,18 @@ class MyApp extends StatelessWidget {
         accentColor: primary_pink,
       ),
 
+<<<<<<< HEAD
 
 
 
       initialRoute: Dashboard.id,
 
+=======
+      initialRoute: LandingPage.id,
+>>>>>>> 914e5f3e8c03e666c8f54171c04af57e87bb9e8e
 
       routes: {
-        
         UnsupportedPage.id: (context)=>UnsupportedPage(),
-        TestPage.id: (context)=>TestPage(),
         LandingPage.id : (context) => LandingPage(),
         Dashboard.id : (context) => Dashboard(),
         Player.id : (context) => Player(songNumber: 0)

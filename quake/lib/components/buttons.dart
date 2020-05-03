@@ -48,6 +48,30 @@ class PauseButton extends StatelessWidget {
   }
 }
 
+
+class ResetButton extends StatelessWidget {
+
+  Function onPress;
+
+  ResetButton({@required this.onPress});
+ 
+  @override
+  Widget build(BuildContext context) {
+    return RawMaterialButton(
+      elevation: 1.0,
+      constraints: BoxConstraints.tightFor(width: 56.0, height: 56.0),
+      shape: CircleBorder(),
+      fillColor: Colors.white,
+      child: Icon(
+        Icons.stop,
+        color: primary_pink,
+        size: 40.0,
+      ),
+      onPressed: null,
+    );
+  }
+}
+
 class SkipPrevious extends StatelessWidget {
 
   Function onPress;
