@@ -11,7 +11,7 @@ class LandingPage extends StatelessWidget {
       child: Container(
         color: Color(0xFF101010),
         child: Center(
-          child: Image(image: AssetImage('assets/quake_logo.png')),
+          child: Image(image: AssetImage('assets/images/quake_logo.png')),
         ),
       ),
       onPressed: (){

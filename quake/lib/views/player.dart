@@ -6,12 +6,29 @@ import 'package:id3/id3.dart';
 
 class Player extends StatefulWidget {
   static const String id = 'player';
-
+  
   @override
   _PlayerState createState() => _PlayerState();
 }
 
 class _PlayerState extends State<Player> {
+
+  String songPath = "assets/sounds/HighwayToHell.mp3";
+  String songTitle = "";
+  String artistName = "";
+
+  _PlayerState();
+
+  /*@override
+  void initState() {
+    MP3Instance mp3instance = MP3Instance(songPath);
+    if(mp3instance.parseTagsSync()){
+      print(mp3instance.getMetaTags());
+    }
+    super.initState();
+  }*/
+
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -46,7 +63,7 @@ class _PlayerState extends State<Player> {
                   ],
                   image: DecorationImage(
                       fit: BoxFit.fill,
-                      image: AssetImage("assets/quake_logo.png"))),
+                      image: AssetImage("assets/images/quake_logo.png"))),
             ),
             SizedBox(height: 20.0),
             Text(
@@ -82,6 +99,11 @@ class _PlayerState extends State<Player> {
             Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: <Widget>[VolumeDown(), MusicSlider(), VolumeUp()]),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: <Widget>[
+                FloatingActionButton(onPressed: null)
+            ],)
           ],
         ))
       ]),
