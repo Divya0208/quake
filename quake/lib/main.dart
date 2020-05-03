@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
 
 
 
-      initialRoute: Player.id,
+      initialRoute: Dashboard.id,
 
 
       routes: {
