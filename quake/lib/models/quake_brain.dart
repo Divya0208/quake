@@ -8,7 +8,8 @@ class QuakeBrain{
     return dataPoint.abs()>=threshold;
   }
 
-  void vibrate()async{
+  void vibrate({int startFrom})async{
+    int startingDataPoint = (startFrom/durationOfDatapoint).round();
     if (await Vibration.hasVibrator()) {
       final wave = await loadWaveformData("assets/waveforms/HighWayToHell.json");
       List <double> dataPoints = wave.scaledData();
@@ -18,9 +19,9 @@ class QuakeBrain{
 
       int countPlaying = 0;
       int countDelaying = 0;
-      int i=0;
       
-        for(i=0;i<dataPoints.length;i+=2){
+      
+        for(int i=startingDataPoint;i<dataPoints.length;i+=2){
           countDelaying = 0;
           while(!_shouldPlay(dataPoints[i])){
             countDelaying+=durationOfDatapoint;

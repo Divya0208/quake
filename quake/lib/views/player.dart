@@ -30,13 +30,12 @@ class _PlayerState extends State<Player> {
   }
 
   void _playAudio(){
-    brain.vibrate();  
+    brain.vibrate(startFrom: stopwatch.elapsedMilliseconds);  
     stopwatch.start();
   }
 
   void _pauseAudio(){
     brain.stopVibration();
-    stopwatch.reset();
     stopwatch.stop();
   }
   @override
