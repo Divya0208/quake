@@ -2,6 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f9c545d7-4725-4d50-8a9d-044e0634cb56" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/quake/assets/images/Highway_To_Hell.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/quake/assets/images/icon-waveform.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/quake/lib/views/pageone.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/quake/lib/views/pagethree.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/quake/lib/views/pagetwo.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quake/assets/fonts/Pangolin-Regular.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/quake/fonts/Pangolin-Regular.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/quake/lib/components/constants.dart" beforeDir="false" afterPath="$PROJECT_DIR$/quake/lib/components/constants.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/quake/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/quake/lib/main.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/quake/lib/views/dashboard.dart" beforeDir="false" afterPath="$PROJECT_DIR$/quake/lib/views/dashboard.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/quake/lib/views/test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/quake/lib/views/test.dart" afterDir="false" />
@@ -16,11 +25,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/quake/lib/views/dashboard.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="385">
-              <caret line="130" column="54" selection-start-line="130" selection-start-column="54" selection-end-line="130" selection-end-column="54" />
+            <state relative-caret-position="-647">
+              <caret line="99" column="30" lean-forward="true" selection-start-line="99" selection-start-column="30" selection-end-line="99" selection-end-column="30" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/quake/lib/views/pageone.dart">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="191">
+              <caret line="48" column="45" selection-start-line="48" selection-start-column="45" selection-end-line="48" selection-end-column="45" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -28,17 +52,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/quake/pubspec.yaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="45" column="22" selection-start-line="45" selection-start-column="22" selection-end-line="45" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://C:/src/flutter/flutter/packages/flutter/lib/src/painting/box_decoration.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="127">
-              <caret line="87" column="8" selection-start-line="87" selection-start-column="8" selection-end-line="87" selection-end-column="8" />
+            <state relative-caret-position="108">
+              <caret line="49" column="39" selection-start-line="49" selection-start-column="39" selection-end-line="49" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -46,8 +61,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/quake/lib/main.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret lean-forward="true" />
+            <state relative-caret-position="323">
+              <caret line="19" column="20" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -64,9 +79,13 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/quake/lib/views/test.dart" />
-        <option value="$PROJECT_DIR$/quake/pubspec.yaml" />
+        <option value="$PROJECT_DIR$/quake/lib/components/constants.dart" />
         <option value="$PROJECT_DIR$/quake/lib/main.dart" />
+        <option value="$PROJECT_DIR$/quake/lib/views/pagetwo.dart" />
+        <option value="$PROJECT_DIR$/quake/lib/views/pagethree.dart" />
         <option value="$PROJECT_DIR$/quake/lib/views/dashboard.dart" />
+        <option value="$PROJECT_DIR$/quake/pubspec.yaml" />
+        <option value="$PROJECT_DIR$/quake/lib/views/pageone.dart" />
       </list>
     </option>
   </component>
@@ -98,6 +117,46 @@
               <item name="miniHack_bleh-_-XD" type="b2602c69:ProjectViewProjectNode" />
               <item name="miniHack_bleh-_-XD" type="462c0819:PsiDirectoryNode" />
               <item name="quake" type="462c0819:PsiDirectoryNode" />
+              <item name="android" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="miniHack_bleh-_-XD" type="b2602c69:ProjectViewProjectNode" />
+              <item name="miniHack_bleh-_-XD" type="462c0819:PsiDirectoryNode" />
+              <item name="quake" type="462c0819:PsiDirectoryNode" />
+              <item name="android" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="miniHack_bleh-_-XD" type="b2602c69:ProjectViewProjectNode" />
+              <item name="miniHack_bleh-_-XD" type="462c0819:PsiDirectoryNode" />
+              <item name="quake" type="462c0819:PsiDirectoryNode" />
+              <item name="android" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="miniHack_bleh-_-XD" type="b2602c69:ProjectViewProjectNode" />
+              <item name="miniHack_bleh-_-XD" type="462c0819:PsiDirectoryNode" />
+              <item name="quake" type="462c0819:PsiDirectoryNode" />
+              <item name="android" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="miniHack_bleh-_-XD" type="b2602c69:ProjectViewProjectNode" />
+              <item name="miniHack_bleh-_-XD" type="462c0819:PsiDirectoryNode" />
+              <item name="quake" type="462c0819:PsiDirectoryNode" />
+              <item name="android" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="miniHack_bleh-_-XD" type="b2602c69:ProjectViewProjectNode" />
+              <item name="miniHack_bleh-_-XD" type="462c0819:PsiDirectoryNode" />
+              <item name="quake" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -105,6 +164,12 @@
               <item name="miniHack_bleh-_-XD" type="462c0819:PsiDirectoryNode" />
               <item name="quake" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="miniHack_bleh-_-XD" type="b2602c69:ProjectViewProjectNode" />
+              <item name="miniHack_bleh-_-XD" type="462c0819:PsiDirectoryNode" />
+              <item name="quake" type="462c0819:PsiDirectoryNode" />
               <item name="fonts" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -135,6 +200,9 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Lenovo\AndroidStudioProjects\miniHack_bleh-_-XD\quake\assets\images" />
+      <recent name="C:\Users\Lenovo\AndroidStudioProjects\miniHack_bleh-_-XD\quake\assets\waveforms" />
+      <recent name="C:\Users\Lenovo\AndroidStudioProjects\miniHack_bleh-_-XD\quake\fonts" />
       <recent name="C:\Users\Lenovo\AndroidStudioProjects\miniHack_bleh-_-XD\quake\assets\fonts" />
     </key>
   </component>
@@ -189,16 +257,16 @@
       <window_info anchor="bottom" id="Dart Analysis" weight="0.3289689" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="TODO" />
-      <window_info anchor="bottom" id="Run" sideWeight="0.4977307" weight="0.3289689" />
+      <window_info active="true" anchor="bottom" id="Run" sideWeight="0.4977307" visible="true" weight="0.22749591" />
       <window_info anchor="bottom" id="Debug" />
-      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Terminal" weight="0.3289689" />
       <window_info anchor="bottom" id="Event Log" sideWeight="0.50226927" side_tool="true" weight="0.3289689" />
       <window_info anchor="bottom" id="Flutter Performance" side_tool="true" />
       <window_info anchor="bottom" id="Messages" weight="0.3289689" />
       <window_info anchor="right" id="Capture Analysis" />
       <window_info anchor="right" id="Theme Preview" />
       <window_info anchor="right" id="Flutter Inspector" />
-      <window_info anchor="right" id="Flutter Outline" />
+      <window_info anchor="right" id="Flutter Outline" weight="0.32980332" />
       <window_info anchor="right" id="Palette&#9;" />
     </layout>
     <layout-to-restore>
@@ -226,30 +294,6 @@
     </layout-to-restore>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/quake/lib/views/test.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/src/flutter/flutter/packages/flutter/lib/src/painting/box_decoration.dart">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="87" column="8" selection-start-line="87" selection-start-column="8" selection-end-line="87" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/quake/pubspec.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="45" column="22" selection-start-line="45" selection-start-column="22" selection-end-line="45" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://C:/src/flutter/flutter/packages/flutter/lib/src/painting/text_style.dart">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="127">
@@ -264,20 +308,90 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/quake/lib/main.dart">
+    <entry file="file://C:/src/flutter/flutter/packages/flutter/lib/src/painting/box_decoration.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret lean-forward="true" />
+        <state relative-caret-position="127">
+          <caret line="87" column="8" selection-start-line="87" selection-start-column="8" selection-end-line="87" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quake/lib/views/test.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="20" column="33" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/quake/lib/components/constants.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="29" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quake/assets/quake_logo.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quake/assets/images/icon-waveform.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quake/lib/views/pagetwo.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1020">
+          <caret line="60" column="18" selection-start-line="60" selection-start-column="18" selection-end-line="60" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quake/lib/main.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="20" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quake/lib/views/pagethree.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="346">
+          <caret line="70" column="2" selection-start-line="70" selection-start-column="2" selection-end-line="70" selection-end-column="2" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quake/pubspec.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="49" column="39" selection-start-line="49" selection-start-column="39" selection-end-line="49" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/quake/lib/views/dashboard.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="130" column="54" selection-start-line="130" selection-start-column="54" selection-end-line="130" selection-end-column="54" />
+        <state relative-caret-position="-647">
+          <caret line="99" column="30" lean-forward="true" selection-start-line="99" selection-start-column="30" selection-end-line="99" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/quake/lib/views/pageone.dart">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="191">
+          <caret line="48" column="45" selection-start-line="48" selection-start-column="45" selection-end-line="48" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
