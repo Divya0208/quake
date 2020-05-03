@@ -110,7 +110,7 @@ class _PlayerState extends State<Player> {
             ),
             SizedBox(height: 40.0),
             Text(
-              '${((stopwatch.elapsedMilliseconds)/60000).round()} : ${(((stopwatch.elapsedMilliseconds)/1000)%60).round()}',
+              '${((stopwatch.elapsedMilliseconds)/60000).truncate()} : ${(((stopwatch.elapsedMilliseconds)/1000).truncate()%60)}',
               style: TextStyle(
                   fontSize: 30.0,
                   color: Colors.white,
