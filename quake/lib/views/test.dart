@@ -25,6 +25,9 @@ class _TestPageState extends State<TestPage> {
   void vibrate()async{
     print(await Vibration.hasAmplitudeControl());
     if (await Vibration.hasVibrator()) {
+<<<<<<< HEAD
+      Vibration.vibrate(pattern:[125,75,125,275,200,275,125,75,125,275,200,600,200,600]);
+=======
       final wave = await loadWaveformData("assets/waveforms/HighWayToHell.json");
       List <double> dataPoints = wave.scaledData();
       print(wave.channels);
@@ -79,6 +82,7 @@ class _TestPageState extends State<TestPage> {
       print(songPattern);
       print('Sum: $sum');
       Vibration.vibrate(pattern: songPattern);
+>>>>>>> bb26040228503f9ae1dc2d0a71d01d77c022ec96
     }
     
   }
