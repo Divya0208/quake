@@ -133,8 +133,15 @@ class _PlayerState extends State<Player> {
                 ]),
             SizedBox(height: 60.0),
             Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: <Widget>[VolumeDown(),MusicSlider(), VolumeUp()]),
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: <Widget>[
+                MusicSlider(
+                  progress: stopwatch.elapsedMilliseconds,
+                  trackLength: brain.getSongLength(),
+                )
+
+              ]
+            ),
           ],
         )),
       ]),
