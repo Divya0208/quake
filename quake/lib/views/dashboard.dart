@@ -248,18 +248,19 @@ class _DashboardState extends State<Dashboard> {
                     child: Padding(
                       padding: EdgeInsets.symmetric(vertical: 20),
                       child: Text(
-                        "Welcome to Quake",
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                            fontFamily: 'Pangolin',
-                            fontSize: 40,
-                            color: Colors.white),
-                      ),
+                      "Welcome to Quake",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                          fontFamily: 'Pangolin',
+                          fontSize: 40,
+                          color: Colors.white),
+                        ),
                     ),
                   ),
                   Flexible(
                       flex: 4,
                       child: Container(
+<<<<<<< HEAD
                           color: Colors.deepPurple,
                           child: Text(
                             "We provide music to the deaf",
@@ -298,6 +299,24 @@ class _DashboardState extends State<Dashboard> {
                     ),
                   ),
                 ],
+=======
+                          color:Colors.deepPurple,
+                          child:Text(
+                        "We provide music to the deaf",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                            fontFamily: 'Pangolin',
+                            fontSize: 30,
+                            color: Colors.purpleAccent),
+                      ))),
+                  Flexible(flex: 6, 
+                    child: Hero(
+                      tag:'container',
+                      child: design_stack()
+                    )
+                  ),
+                ]),
+>>>>>>> bba5d3cdeb3da77c8b9ad33686b51451a55f585d
               ),
             ),
           ],
