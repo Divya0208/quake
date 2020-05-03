@@ -21,6 +21,7 @@ You can download the APK for the app from the following link -
 ## Explaination Video
 
 The explaination video can be viewed by going to the following link -
+https://drive.google.com/open?id=1XLOgbszWuOnW5DBiqAo0Thwy3vE86y7e
 
 ## Credits
 
@@ -29,5 +30,5 @@ We understood the concept of sound and digital vibrations through the following 
 2.  https://matt.aimonetti.net/posts/2015-12-audio-dsp-demystified-sampling/
 3.  https://matt.aimonetti.net/posts/2019-07-drawing-waveforms-in-flutter/
 
-For converting mp3 to wave data points, all the credits go to Audiowaveform
+For converting mp3 to wave data points, all the credits go to Audiowaveform -
 https://github.com/bbc/audiowaveform/releases
