@@ -7,18 +7,18 @@ class LandingPage extends StatelessWidget {
 
   static const String id = 'landing_page';
 
-  Future<bool> _haveAmplitudeControl(BuildContext context)async{
+  void _haveAmplitudeControl(BuildContext context)async{
     bool ampControl = await Vibration.hasAmplitudeControl();
-    if(!ampControl){
-      Navigator.pushNamed(context, UnsupportedPage.id);
-    }
-    else{
-      Navigator.pushNamed(context, Dashboard.id);
-    }
+    Future.delayed(Duration(milliseconds:1500),(){
+      if(!ampControl){
+        Navigator.pushNamed(context, UnsupportedPage.id);
+      }
+    });
   }
   
   @override
   Widget build(BuildContext context) { 
+    _haveAmplitudeControl(context);
     return FlatButton(
       child: Container(
         color: Color(0xFF101010),
@@ -27,7 +27,7 @@ class LandingPage extends StatelessWidget {
         ),
       ),
       onPressed: (){
-        _haveAmplitudeControl(context);
+        Navigator.pushNamed(context, Dashboard.id);
       },
     );
   }

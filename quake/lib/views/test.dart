@@ -86,6 +86,14 @@ class _TestPageState extends State<TestPage> {
       print(songPattern);
       print('Sum: $sum');
       Vibration.vibrate(pattern: songPattern);
+
+
+       sum = songPattern.reduce((value, element) => value + element);
+      int min = (sum/(60*1000)).round();
+      int sec = ((sum/1000).round() % 60);
+      print('Song Length: $min min $sec s');
+      Vibration.vibrate(pattern: songPattern,intensities: intensityPattern);
+
     }
     
   }
