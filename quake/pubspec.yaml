@@ -45,10 +45,9 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/images/quake_logo.png
-    - assets/images/egg.jpg
+    - assets/images/egg.png
     - assets/images/Highway_To_Hell.jpg
     - assets/waveforms/HighWayToHell.json
-    - assets/sounds/HighWayToHell.mp3
 
 
   fonts:

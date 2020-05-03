@@ -68,121 +68,133 @@ class _PlayerState extends State<Player> {
     String songTitle = playList[songNumber].songName;
     String artistName = playList[songNumber].artistName;
 
-    return Container(
-      child: Stack(children: <Widget>[
-        Row(crossAxisAlignment: CrossAxisAlignment.stretch, children: <Widget>[
-          Expanded(
-            child: Container(
-              color: primary_pink,
-            ),
+    return SafeArea(
+      child: Scaffold(
+        floatingActionButton: FloatingActionButton(
+          onPressed: (){
+            _launchURL('https://www.youtube.com/watch?v=l482T0yNkeo');
+          },
+          backgroundColor: Colors.black12,
+          child: Image.asset('assets/images/egg.png',
+            
           ),
-          Expanded(
-            child: Container(
-              color: primary_black,
-            ),
-          )
-        ]),
-        Center(
-            child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Container(
-              width: 250.0,
-              height: 250.0,
-              decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                boxShadow: [
-                  BoxShadow(
-                      offset: Offset(-10.0, 10.0),
-                      color: Color(0x33000000),
-                      blurRadius: 10.0,
-                      spreadRadius: 10.0)
-                ],
-                image: DecorationImage(
-                  fit: BoxFit.fill,
-                  image: AssetImage("assets/images/Highway_To_Hell.jpg"),
-                ),
+        ),
+        body: Stack(children: <Widget>[
+          Row(crossAxisAlignment: CrossAxisAlignment.stretch, children: <Widget>[
+            Expanded(
+              child: Container(
+                color: primary_pink,
               ),
             ),
-            SizedBox(height: 20.0),
-            Text(
-              songTitle,
-              style: TextStyle(
-                  fontSize: 20.0,
-                  color: Colors.white,
-                  fontFamily: 'Source Sans Pro',
-                  decoration: TextDecoration.none),
-            ),
-            SizedBox(height: 10.0),
-            Text(
-              artistName,
-              style: TextStyle(
-                  fontSize: 15.0,
-                  color: Colors.white,
-                  decoration: TextDecoration.none),
-            ),
-            SizedBox(height: 40.0),
-            Text(
-              '${((stopwatch.elapsedMilliseconds)/60000).truncate()} : ${(((stopwatch.elapsedMilliseconds)/1000).truncate()%60)}',
-              style: TextStyle(
-                  fontSize: 30.0,
-                  color: Colors.white,
-                  decoration: TextDecoration.none),
-            ),
-            SizedBox(height: 60.0),
-            Text(
-              findLyrics(),
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                  fontSize: 18.0,
-                  color: Colors.white,
-                  decoration: TextDecoration.none),
-                          
-            ),
-            SizedBox(height: 60.0),
-            Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: <Widget>[
-                  GestureDetector(
-                    onTap:(){
-                      setState(() {
-                        playing=!playing;
-                        playing?_playAudio():_pauseAudio();
-                      });
-                    },
-                    child:playing
-                      ? PauseButton(
-                        onPress: null,
-                      )
-                      : PlayButton(
-                        onPress: null,
-                      )
+            Expanded(
+              child: Container(
+                color: primary_black,
+              ),
+            )
+          ]),
+          Center(
+              child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Container(
+                width: 250.0,
+                height: 250.0,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  boxShadow: [
+                    BoxShadow(
+                        offset: Offset(-10.0, 10.0),
+                        color: Color(0x33000000),
+                        blurRadius: 10.0,
+                        spreadRadius: 10.0)
+                  ],
+                  image: DecorationImage(
+                    fit: BoxFit.fill,
+                    image: AssetImage("assets/images/Highway_To_Hell.jpg"),
                   ),
-                  GestureDetector(
-                    onTap:  (){
+                ),
+              ),
+              SizedBox(height: 20.0),
+              Text(
+                songTitle,
+                style: TextStyle(
+                    fontSize: 20.0,
+                    color: Colors.white,
+                    fontFamily: 'Source Sans Pro',
+                    decoration: TextDecoration.none),
+              ),
+              SizedBox(height: 10.0),
+              Text(
+                artistName,
+                style: TextStyle(
+                    fontSize: 15.0,
+                    color: Colors.white,
+                    decoration: TextDecoration.none),
+              ),
+              SizedBox(height: 40.0),
+              Text(
+                '${((stopwatch.elapsedMilliseconds)/60000).truncate()} : ${(((stopwatch.elapsedMilliseconds)/1000).truncate()%60)}',
+                style: TextStyle(
+                    fontSize: 30.0,
+                    color: Colors.white,
+                    decoration: TextDecoration.none),
+              ),
+              SizedBox(height: 60.0),
+              Text(
+                findLyrics(),
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                    fontSize: 18.0,
+                    color: Colors.white,
+                    decoration: TextDecoration.none),
+                            
+              ),
+              SizedBox(height: 60.0),
+              Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: <Widget>[
+                    GestureDetector(
+                      onTap:(){
                         setState(() {
-                          playing = false;
-                          _resetAudio();
+                          playing=!playing;
+                          playing?_playAudio():_pauseAudio();
                         });
                       },
-                    child: ResetButton(),
+                      child:playing
+                        ? PauseButton(
+                          onPress: null,
+                        )
+                        : PlayButton(
+                          onPress: null,
+                        )
+                    ),
+                    GestureDetector(
+                      onTap:  (){
+                          setState(() {
+                            playing = false;
+                            _resetAudio();
+                          });
+                        },
+                      child: ResetButton(),
+                    )
+                
+                  ]),
+              SizedBox(height: 60.0),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: <Widget>[
+                  MusicSlider(
+                    progress: stopwatch.elapsedMilliseconds,
+                    trackLength: brain.getSongLength(),
                   )
-              
-                ]),
-            SizedBox(height: 60.0),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: <Widget>[
-                MusicSlider(
-                  progress: stopwatch.elapsedMilliseconds,
-                  trackLength: brain.getSongLength(),
-                )
 
-              ]
-            ),
-          ],
-        )),
-      ]),
+                ]
+              ),
+            ],
+          )),
+          
+        ]),
+      ),
     );
   }
 }
