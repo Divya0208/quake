@@ -19,15 +19,13 @@ class MyApp extends StatelessWidget {
       theme: ThemeData.dark().copyWith(
         accentColor: primary_pink,
       ),
-<<<<<<< HEAD
+
 
 
 
       initialRoute: Player.id,
 
-=======
-      initialRoute: Player.id,
->>>>>>> 8c19583577e0b7e60d190d17453837013f28f687
+
       routes: {
         
         UnsupportedPage.id: (context)=>UnsupportedPage(),
