@@ -5,6 +5,7 @@ import 'views/dashboard.dart';
 import 'views/player.dart';
 import 'views/test.dart';
 import 'views/unsupported_page.dart';
+import 'package:vibration/vibration.dart';
 
 void main() => runApp(MyApp());
 
@@ -13,6 +14,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Quake',
       theme: ThemeData.dark().copyWith(
         accentColor: primary_pink,
