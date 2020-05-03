@@ -6,7 +6,6 @@ import 'views/player.dart';
 import 'views/test.dart';
 import 'views/unsupported_page.dart';
 
-
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {

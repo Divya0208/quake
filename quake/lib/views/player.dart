@@ -55,33 +55,6 @@ class _PlayerState extends State<Player> {
             ),
           )
         ]),
-        Row(
-          crossAxisAlignment: CrossAxisAlignment.end,
-          mainAxisAlignment: MainAxisAlignment.end,
-          children: <Widget>[
-            Column(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: <Widget>[
-                FlatButton(
-                  onPressed: () {
-                    _launchURL(playList[songNumber].youtubeURL);
-                  },
-                  child: Container(
-                    width: 40.0,
-                    height: 40.0,
-                    decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      color: Colors.black,
-                      image: DecorationImage(
-                        image: AssetImage("assets/images/egg.jpg"),
-                      ),
-                    ),
-                  ),
-                ),
-              ],
-            )
-          ],
-        ),
         Center(
             child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

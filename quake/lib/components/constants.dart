@@ -59,17 +59,5 @@ List<Song> playList = [
       ),
     ]
     
-    ),
-  Song(
-    songName: 'Highway to Hell',
-    artistName: 'AC/DC',
-    songPath: 'assets/sounds/HighwayToHell.mp3',
-    songBeatsPath: 'assets/waveforms/HighwayToHell.json'
-  ),
-  Song(
-    songName: 'Highway to Hell',
-    artistName: 'AC/DC',
-    songPath: 'assets/sounds/HighwayToHell.mp3',
-    songBeatsPath: 'assets/waveforms/HighwayToHell.json'
-  ),
+    )
 ];
