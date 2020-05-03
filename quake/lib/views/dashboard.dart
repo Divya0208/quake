@@ -109,13 +109,13 @@ class _DashboardState extends State<Dashboard> {
                     child: Padding(
                       padding: EdgeInsets.symmetric(vertical: 20),
                       child: Text(
-                        "Welcome to Quake",
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                            fontFamily: 'Pangolin',
-                            fontSize: 40,
-                            color: Colors.white),
-                      ),
+                      "Welcome to Quake",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                          fontFamily: 'Pangolin',
+                          fontSize: 40,
+                          color: Colors.white),
+                        ),
                     ),
                   ),
                   Flexible(
@@ -130,7 +130,12 @@ class _DashboardState extends State<Dashboard> {
                             fontSize: 30,
                             color: Colors.purpleAccent),
                       ))),
-                  Flexible(flex: 6, child: design_stack()),
+                  Flexible(flex: 6, 
+                    child: Hero(
+                      tag:'container',
+                      child: design_stack()
+                    )
+                  ),
                 ]),
               ),
             ],

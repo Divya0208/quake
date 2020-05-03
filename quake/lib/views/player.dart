@@ -19,6 +19,12 @@ class _PlayerState extends State<Player> {
   _PlayerState();
 
   @override
+  void initState() {
+    super.initState();
+  }
+
+
+  @override
   Widget build(BuildContext context) {
     return Container(
       child: Stack(children: <Widget>[

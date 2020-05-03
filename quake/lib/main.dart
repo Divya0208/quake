@@ -4,6 +4,8 @@ import 'views/landing_page.dart';
 import 'views/dashboard.dart';
 import 'views/player.dart';
 import 'views/test.dart';
+import 'views/unsupported_page.dart';
+
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -11,12 +13,14 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Quake',
       theme: ThemeData.dark().copyWith(
         accentColor: primary_pink,
       ),
-      initialRoute: Player.id,
+      initialRoute: LandingPage.id,
       routes: {
+        UnsupportedPage.id: (context)=>UnsupportedPage(),
         TestPage.id: (context)=>TestPage(),
         LandingPage.id : (context) => LandingPage(),
         Dashboard.id : (context) => Dashboard(),
