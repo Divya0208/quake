@@ -62,9 +62,6 @@ class _PlayerState extends State<Player> {
             ),
           )
         ]),
-        Image(
-          image: AssetImage('assets/images/quake.png'),
-        ),
         Row(
           crossAxisAlignment: CrossAxisAlignment.end,
           mainAxisAlignment: MainAxisAlignment.end,
