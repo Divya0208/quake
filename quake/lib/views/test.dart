@@ -36,9 +36,9 @@ class _TestPageState extends State<TestPage> {
       }*/
       int countV = 0;
       int countP = 0;
-      List <int> songPattern = [];
+      List <int> songPattern = [0];
       for(int i=0; i< dataPoints.length; i=i+2){
-        if (dataPoints[i].abs() > 0.02){
+        if (dataPoints[i].abs() > 0.00002){
           if(countP > 0){
             songPattern.add((countP*1000/172).round());
             countP=0;
@@ -55,8 +55,9 @@ class _TestPageState extends State<TestPage> {
       }
 
       //print(dataPoints.length);
-      //print(songPattern);
-      Vibration.vibrate(pattern: songPattern);
+
+      print(songPattern);
+      await Vibration.vibrate(pattern: songPattern);
     }
     
   }
