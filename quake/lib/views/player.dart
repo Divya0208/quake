@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:quake/components/constants.dart';
 import 'package:quake/components/buttons.dart';
 import 'package:quake/components/music_slider.dart';
+import 'package:id3/id3.dart';
 
 class Player extends StatefulWidget {
   static const String id = 'player';
