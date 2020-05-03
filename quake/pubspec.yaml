@@ -26,6 +26,7 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.2
   font_awesome_flutter: ^8.8.1
+  id3: ^0.1.8
 
 
 dev_dependencies:
@@ -44,9 +45,20 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
+<<<<<<< HEAD
     - assets/quake_logo.png
     - assets/waveforms/HighWayToHell.json
   fonts:
+=======
+    - assets/images/quake_logo.png
+    - assets/waveforms/HighWayToHell.json
+    - assets/sounds/HighWayToHell.mp3
+
+  fonts:
+    - family: Pangolin
+      fonts:
+        - asset: fonts/Pangolin-Regular.ttf
+>>>>>>> 2b66c747ea5a61c1439532afa80a2a9ffcfc4ab0
     - family: Pacifico
       fonts:
         - asset: fonts/Pacifico-Regular.ttf

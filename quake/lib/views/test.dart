@@ -33,7 +33,12 @@ class _TestPageState extends State<TestPage> {
     if (await Vibration.hasVibrator()) {
       final wave = await loadWaveformData("assets/waveforms/HighWayToHell.json");
       List <double> dataPoints = wave.scaledData();
+<<<<<<< HEAD
   
+=======
+      print(wave.channels);
+      
+>>>>>>> 2b66c747ea5a61c1439532afa80a2a9ffcfc4ab0
       List <int> songPattern = [];
       List <int> intensityPattern = [];
       //for(int i=0; i< dataPoints.length; i=i+2){
@@ -82,11 +87,18 @@ class _TestPageState extends State<TestPage> {
         }
       
       //print(dataPoints.length);
+<<<<<<< HEAD
       int sum = songPattern.reduce((value, element) => value + element);
       int min = (sum/(60*1000)).round();
       int sec = ((sum/1000).round() % 60);
       print('Song Length: $min min $sec s');
       Vibration.vibrate(pattern: songPattern,intensities: intensityPattern);
+=======
+      var sum = songPattern.reduce((value, element) => value + element);
+      print(songPattern);
+      print('Sum: $sum');
+      Vibration.vibrate(pattern: songPattern);
+>>>>>>> 2b66c747ea5a61c1439532afa80a2a9ffcfc4ab0
     }
     
   }
