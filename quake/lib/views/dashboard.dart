@@ -4,16 +4,13 @@ import 'pageone.dart';
 import 'pagetwo.dart';
 import 'pagethree.dart';
 
-
 class MyHomePage extends StatefulWidget {
-
   @override
   _MyHomePageState createState() => _MyHomePageState();
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
-  List<Widget> pages = [PageOne(),PageTwo(),PageThree()];
+  List<Widget> pages = [PageOne(), PageTwo(), PageThree()];
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +22,6 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 
-
   Widget design_stack() {
     return Stack(children: <Widget>[
       RawMaterialButton(
@@ -33,13 +29,13 @@ class _MyHomePageState extends State<MyHomePage> {
         elevation: 2.0,
         child: Ink(
             decoration: BoxDecoration(
-              shape: BoxShape.circle,
-              gradient: LinearGradient(
-                colors: [Color(0xff570292), Color(0xff743469)],
-                begin: Alignment.centerLeft,
-                end: Alignment.centerRight,
-              ),
-            )),
+          shape: BoxShape.circle,
+          gradient: LinearGradient(
+            colors: [Color(0xff570292), Color(0xff743469)],
+            begin: Alignment.centerLeft,
+            end: Alignment.centerRight,
+          ),
+        )),
         padding: EdgeInsets.all(50.0),
         shape: CircleBorder(),
       ),
@@ -48,13 +44,13 @@ class _MyHomePageState extends State<MyHomePage> {
         elevation: 20.0,
         child: Ink(
             decoration: BoxDecoration(
-              shape: BoxShape.circle,
-              gradient: LinearGradient(
-                colors: [Color(0xff6F16AC), Color(0xff923582)],
-                begin: Alignment.centerLeft,
-                end: Alignment.centerRight,
-              ),
-            )),
+          shape: BoxShape.circle,
+          gradient: LinearGradient(
+            colors: [Color(0xff6F16AC), Color(0xff923582)],
+            begin: Alignment.centerLeft,
+            end: Alignment.centerRight,
+          ),
+        )),
         padding: EdgeInsets.all(65.0),
         shape: CircleBorder(),
       ),
@@ -63,13 +59,13 @@ class _MyHomePageState extends State<MyHomePage> {
         elevation: 20.0,
         child: Ink(
             decoration: BoxDecoration(
-              shape: BoxShape.circle,
-              gradient: LinearGradient(
-                colors: [Color(0xff8115CB), Color(0xffA22A8D)],
-                begin: Alignment.centerLeft,
-                end: Alignment.centerRight,
-              ),
-            )),
+          shape: BoxShape.circle,
+          gradient: LinearGradient(
+            colors: [Color(0xff8115CB), Color(0xffA22A8D)],
+            begin: Alignment.centerLeft,
+            end: Alignment.centerRight,
+          ),
+        )),
         padding: EdgeInsets.all(80.0),
         shape: CircleBorder(),
       ),
@@ -78,13 +74,13 @@ class _MyHomePageState extends State<MyHomePage> {
         elevation: 20.0,
         child: Ink(
             decoration: BoxDecoration(
-              shape: BoxShape.circle,
-              gradient: LinearGradient(
-                colors: [Color(0xff8E24D6), Color(0xffBD28A3)],
-                begin: Alignment.centerLeft,
-                end: Alignment.centerRight,
-              ),
-            )),
+          shape: BoxShape.circle,
+          gradient: LinearGradient(
+            colors: [Color(0xff8E24D6), Color(0xffBD28A3)],
+            begin: Alignment.centerLeft,
+            end: Alignment.centerRight,
+          ),
+        )),
         padding: EdgeInsets.all(95.0),
         shape: CircleBorder(),
       ),
@@ -99,31 +95,9 @@ class _MyHomePageState extends State<MyHomePage> {
         padding: EdgeInsets.all(50.0),
         shape: CircleBorder(),
       ),
-
     ]);
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 class Dashboard extends StatefulWidget {
   static const String id = 'dashboard';
@@ -214,15 +188,15 @@ class _DashboardState extends State<Dashboard> {
         padding: EdgeInsets.all(50.0),
         shape: CircleBorder(),
       ),
-
     ]);
   }
 
   @override
   Widget build(BuildContext context) {
     return MyHomePage();
-  }}
-    /*
+  }
+}
+/*
     Scaffold(
 
       body: SafeArea(
