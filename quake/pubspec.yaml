@@ -46,7 +46,6 @@ flutter:
   assets:
     - assets/images/quake_logo.png
     - assets/images/egg.jpg
-    - assets/images/quake.png
     - assets/images/Highway_To_Hell.jpg
     - assets/waveforms/HighWayToHell.json
     - assets/sounds/HighWayToHell.mp3
@@ -56,8 +55,11 @@ flutter:
     - family: Pangolin
       fonts:
         - asset: fonts/Pangolin-Regular.ttf
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 781a3c06e22ca92c45773de1a085b2dd52ed7fe2
     - family: Pacifico
       fonts:
         - asset: fonts/Pacifico-Regular.ttf

@@ -22,7 +22,6 @@ class MyApp extends StatelessWidget {
       initialRoute: Player.id,
 
       routes: {
-        
         UnsupportedPage.id: (context)=>UnsupportedPage(),
         LandingPage.id : (context) => LandingPage(),
         Dashboard.id : (context) => Dashboard(),
