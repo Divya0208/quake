@@ -20,7 +20,7 @@ You can download the APK for the app from the following link -
 
 ## Explaination Video
 
-The explaination video can be viewed by going to the following link -
+The explanation video can be viewed by going to the following link -
 https://drive.google.com/open?id=1XLOgbszWuOnW5DBiqAo0Thwy3vE86y7e
 
 ## Credits
