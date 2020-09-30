@@ -4,104 +4,106 @@ import 'package:quake/views/player.dart';
 
 class PageOne extends StatelessWidget {
   Widget design_stack(BuildContext context) {
-    return Stack(children: <Widget>[
-      RawMaterialButton(
-        onPressed: () {
-          Navigator.pushNamed(context, Player.id);
-        },
-        elevation: 2.0,
-        child: Ink(
-            decoration: BoxDecoration(
-          shape: BoxShape.circle,
-          gradient: LinearGradient(
-            colors: [Color(0xff570292), Color(0xff743469)],
-            begin: Alignment.centerLeft,
-            end: Alignment.centerRight,
-          ),
-        )),
-        padding: EdgeInsets.all(50.0),
-        shape: CircleBorder(),
-      ),
-      RawMaterialButton(
-        onPressed: () {
-          Navigator.pushNamed(context, Player.id);
-        },
-        elevation: 20.0,
-        child: Ink(
-            decoration: BoxDecoration(
-          shape: BoxShape.circle,
-          gradient: LinearGradient(
-            colors: [Color(0xff6F16AC), Color(0xff923582)],
-            begin: Alignment.centerLeft,
-            end: Alignment.centerRight,
-          ),
-        )),
-        padding: EdgeInsets.all(65.0),
-        shape: CircleBorder(),
-      ),
-      RawMaterialButton(
-        onPressed: () {
-          Navigator.pushNamed(context, Player.id);
-        },
-        elevation: 20.0,
-        child: Ink(
-            decoration: BoxDecoration(
-          shape: BoxShape.circle,
-          gradient: LinearGradient(
-            colors: [Color(0xff8115CB), Color(0xffA22A8D)],
-            begin: Alignment.centerLeft,
-            end: Alignment.centerRight,
-          ),
-        )),
-        padding: EdgeInsets.all(80.0),
-        shape: CircleBorder(),
-      ),
-      RawMaterialButton(
-        onPressed: () {
-          Navigator.pushNamed(context, Player.id);
-        },
-        elevation: 20.0,
-        child: Ink(
-            decoration: BoxDecoration(
-          shape: BoxShape.circle,
-          gradient: LinearGradient(
-            colors: [Color(0xff8E24D6), Color(0xffBD28A3)],
-            begin: Alignment.centerLeft,
-            end: Alignment.centerRight,
-          ),
-        )),
-        padding: EdgeInsets.all(95.0),
-        shape: CircleBorder(),
-      ),
-      RawMaterialButton(
-        onPressed: () {
-          Navigator.pushNamed(context, Player.id);
-        },
-        elevation: 20.0,
-        child: Center(
-          child: Image(
-            image: AssetImage("./assets/images/icon-waveform.png"),
-          ),
+    return Padding(
+      padding: const EdgeInsets.all(50.0),
+      child: Stack(children: <Widget>[
+        RawMaterialButton(
+          onPressed: () {
+            Navigator.pushNamed(context, Player.id);
+          },
+          elevation: 2.0,
+          child: Ink(
+              decoration: BoxDecoration(
+            shape: BoxShape.circle,
+            gradient: LinearGradient(
+              colors: [Color(0xff570292), Color(0xff743469)],
+              begin: Alignment.centerLeft,
+              end: Alignment.centerRight,
+            ),
+          )),
+          shape: CircleBorder(),
         ),
-        padding: EdgeInsets.all(50.0),
-        shape: CircleBorder(),
-      ),
-      RawMaterialButton(
-        onPressed: () {
-          Navigator.pushNamed(context, Player.id);
-        },
-        elevation: 20.0,
-        child: Center(
-          child: Icon(
-            FontAwesomeIcons.play,
-            color: Colors.white,
-            size: 50,
-          ),
+        RawMaterialButton(
+          onPressed: () {
+            Navigator.pushNamed(context, Player.id);
+          },
+          elevation: 20.0,
+          child: Ink(
+              decoration: BoxDecoration(
+            shape: BoxShape.circle,
+            gradient: LinearGradient(
+              colors: [Color(0xff6F16AC), Color(0xff923582)],
+              begin: Alignment.centerLeft,
+              end: Alignment.centerRight,
+            ),
+          )),
+          padding: EdgeInsets.all(25.0),
+          shape: CircleBorder(),
         ),
-        padding: EdgeInsets.all(50.0),
-        shape: CircleBorder(),
-      ),
-    ]);
+        RawMaterialButton(
+          onPressed: () {
+            Navigator.pushNamed(context, Player.id);
+          },
+          elevation: 20.0,
+          child: Ink(
+              decoration: BoxDecoration(
+            shape: BoxShape.circle,
+            gradient: LinearGradient(
+              colors: [Color(0xff8115CB), Color(0xffA22A8D)],
+              begin: Alignment.centerLeft,
+              end: Alignment.centerRight,
+            ),
+          )),
+          padding: EdgeInsets.all(55.0),
+          shape: CircleBorder(),
+        ),
+        RawMaterialButton(
+          onPressed: () {
+            Navigator.pushNamed(context, Player.id);
+          },
+          elevation: 20.0,
+          child: Ink(
+              decoration: BoxDecoration(
+            shape: BoxShape.circle,
+            gradient: LinearGradient(
+              colors: [Color(0xff8E24D6), Color(0xffBD28A3)],
+              begin: Alignment.centerLeft,
+              end: Alignment.centerRight,
+            ),
+          )),
+          padding: EdgeInsets.all(95.0),
+          shape: CircleBorder(),
+        ),
+        RawMaterialButton(
+          onPressed: () {
+            Navigator.pushNamed(context, Player.id);
+          },
+          elevation: 20.0,
+          child: Center(
+            child: Image(
+              image: AssetImage("./assets/images/icon-waveform.png"),
+            ),
+          ),
+          padding: EdgeInsets.all(50.0),
+          shape: CircleBorder(),
+        ),
+        RawMaterialButton(
+          onPressed: () {
+            Navigator.pushNamed(context, Player.id);
+          },
+          elevation: 20.0,
+          child: Center(
+            child: Icon(
+              FontAwesomeIcons.play,
+              color: Colors.white,
+              size: 50,
+            ),
+          ),
+          padding: EdgeInsets.all(50.0),
+          shape: CircleBorder(),
+        ),
+      ]),
+    );
   }
 
   @override
@@ -127,10 +129,7 @@ class PageOne extends StatelessWidget {
                 child: Container(
                     width: MediaQuery.of(context).size.width,
                     height: MediaQuery.of(context).size.height / 8,
-                    child: GestureDetector(
-                      child: design_stack(context)
-                    )
-                  ),
+                    child: design_stack(context)),
               )),
             ),
           ),
